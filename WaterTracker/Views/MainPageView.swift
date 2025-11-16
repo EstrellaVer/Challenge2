@@ -7,6 +7,7 @@
 import SwiftUI
 import CoreMotion
 import Combine
+import WidgetKit
 
 class MotionManager: ObservableObject {
     private var motion = CMMotionManager()
@@ -218,14 +219,23 @@ struct MainPageView: View {
     
     func agregarAgua(_ cantidad: Int) {
         currentIntake += cantidad
-        
+
         let newProgress = CGFloat(currentIntake) / CGFloat(goal)
         withAnimation(.easeInOut(duration: 0.6)) {
             progress = min(newProgress, 1.0)
         }
-        
+
+        let defaults = UserDefaults(suiteName: "group.com.estrellaverdiguel.watertracker")
+        defaults?.set(currentIntake, forKey: "currentIntake")
+        defaults?.set(goal, forKey: "goal")
+        defaults?.set(Date().addingTimeInterval(TimeInterval(reminderInterval * 60)), forKey: "nextDrinkTime")
+
+   
+        WidgetCenter.shared.reloadAllTimelines()
+
         startReminderTimer()
     }
+
 }
 
 
