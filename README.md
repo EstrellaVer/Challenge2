@@ -26,26 +26,26 @@ The app features fluid water animations that rise as you drink, a simple navigat
 
 ## Project Structure
 WaterTracker/
-│── Theme/                     # Colors, styles, typography
-│── Views/                     # Main SwiftUI screens
-│     ├── ContentView
-│     ├── MainPageView
-│     ├── RegisterView
-│     ├── HistoryView
-│     ├── SettingsView
-│     └── TabBarView
+│── Theme/ # Colors, styles, typography
+│── Views/ # Main SwiftUI screens
+│ ├── ContentView
+│ ├── MainPageView
+│ ├── RegisterView
+│ ├── HistoryView
+│ ├── SettingsView
+│ └── TabBarView
 │
-│── WaterTrackerApp            # App entry point
-│── Assets                     # App icons, images, colors
+│── WaterTrackerApp # App entry point
+│── Assets # App icons, images, colors
 │
-├── WaterWidget/               # Widget files
-│     ├── AppIntent
-│     ├── WaterProgressWidget
-│     ├── WaterWidget
-│     ├── WaterWidgetBundle
-│     └── WaterWidgetControl
+├── WaterWidget/ # Widget files
+│ ├── AppIntent
+│ ├── WaterProgressWidget
+│ ├── WaterWidget
+│ ├── WaterWidgetBundle
+│ └── WaterWidgetControl
 │
-└── WaterWidgetExtension/      # Widget extension configuration
+└── WaterWidgetExtension/ # Widget extension configuration
 
 
 ## Next Steps
